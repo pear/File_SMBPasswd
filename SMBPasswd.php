@@ -221,8 +221,8 @@ class File_SMBPasswd extends PEAR {
             return $this->addAccountEncrypted(
                         $user, 
                         $userid, 
-                        strtoupper(bin2hex($this->cryptEngine->ntPasswordHash($pass))), 
                         strtoupper(bin2hex($this->cryptEngine->lmPasswordHash($pass))),
+                        strtoupper(bin2hex($this->cryptEngine->ntPasswordHash($pass))), 
                         $comment,
                         $flags);
         }
@@ -318,8 +318,8 @@ class File_SMBPasswd extends PEAR {
             return $this->modAccountEncrypted(
                         $user, 
                         $userid, 
-                        strtoupper(bin2hex($this->cryptEngine->ntPasswordHash($pass))), 
                         strtoupper(bin2hex($this->cryptEngine->lmPasswordHash($pass))),
+                        strtoupper(bin2hex($this->cryptEngine->ntPasswordHash($pass))), 
                         $comment, 
                         $flags);
         }
