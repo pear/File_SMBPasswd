@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
-<package version="0.9.0">
+<package version="1.0">
   <name>File_SMBPasswd</name>
   <summary>Class for managing SAMBA style password files.</summary>
   <description>With this package, you can maintain smbpasswd-files, usualy used by SAMBA.
@@ -28,18 +28,19 @@
 
     <filelist>
       <dir name="/" baseinstalldir="File">
-      <file role="php" name="SMBPasswd.php"/>
-      <dir name="examples" role="doc">
-        <file name="smbpasswd.php"/>
-        <file name="smbpasswd"/>
+        <file role="php" name="SMBPasswd.php"/>
+        <dir name="examples" role="doc">
+          <file name="smbpasswd.php"/>
+          <file name="smbpasswd"/>
+        </dir>
       </dir>
-    </dir>
     </filelist>
-    <deps>
-        <dep type="pkg" rel="ge" version="0.8.5">Crypt_CHAP</dep>
-        <dep type="ext" rel="has">mhash</dep>
-    </deps>    
-  </release>   
+  </release>
+
+  <deps>
+    <dep type="pkg" rel="ge" version="0.8.5">Crypt_CHAP</dep>
+    <dep type="ext" rel="has">mhash</dep>
+  </deps>    
 
   <changelog>
     <release>
