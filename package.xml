@@ -17,12 +17,12 @@
   <license>BSD</license>
 
   <release>
-      <version>1.0.0</version>
-      <date>2004-03-25</date>
+      <version>1.0.1</version>
+      <date>2004-09-14</date>
       <state>stable</state>
       <notes>
 <![CDATA[
-* Stable version released
+* Wrong order of NT-Hash/LM-Hash when using addAccount()/modAccount()
 ]]>
       </notes>
 
@@ -43,6 +43,17 @@
   </deps>    
 
   <changelog>
+    <release>
+      <version>1.0.1</version>
+      <date>2004-09-14</date>
+      <state>stable</state>
+      <notes>
+<![CDATA[
+* Wrong order of NT-Hash/LM-Hash when using addAccount()/modAccount()
+]]>
+      </notes>
+    </release>
+
     <release>
       <version>1.0.0</version>
       <date>2004-03-25</date>
