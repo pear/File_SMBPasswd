@@ -108,9 +108,9 @@ class File_SMBPasswd extends PEAR {
     function File_SMBPasswd($file = 'smbpasswd') 
     {
         $this->file = $file;
-        $this->cryptEngine = new Crypt_MSCHAPv1;
+        $this->cryptEngine = new Crypt_CHAP_MSv1;
     }     
-    
+
     /**
      * Load the given smbpasswd file
      *
@@ -343,13 +343,13 @@ class File_SMBPasswd extends PEAR {
      * @return mixed returns PEAR_Error, if the user doesn't exists
      * @access public	
      */
-    function delAccount($user) 
+    function delAccount($name) 
     {
-        if (isset($this->accounts[$user])) {
-            unset($this->accounts[$user]);
+        if (isset($this->accounts[$name])) {
+            unset($this->accounts[$name]);
             return true;
         } else {
-            return $this->raiseError( "Couldn't delete user '$user', because the user doesn't exists!") ; 
+            return $this->raiseError( "Couldn't delete account '$name', because the account doesn't exists!") ; 
         }
     }   
 
