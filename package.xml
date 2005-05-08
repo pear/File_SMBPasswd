@@ -17,12 +17,12 @@
   <license>BSD</license>
 
   <release>
-      <version>1.0.1</version>
-      <date>2004-09-14</date>
+      <version>1.0.2</version>
+      <date>2005-05-05</date>
       <state>stable</state>
       <notes>
 <![CDATA[
-* Wrong order of NT-Hash/LM-Hash when using addAccount()/modAccount()
+* The Account Flags field had the wrong length.
 ]]>
       </notes>
 
@@ -43,6 +43,17 @@
   </deps>    
 
   <changelog>
+  <release>
+      <version>1.0.2</version>
+      <date>2005-05-05</date>
+      <state>stable</state>
+      <notes>
+<![CDATA[
+* The Account Flags field had the wrong length.
+]]>
+      </notes>
+    </release>
+
     <release>
       <version>1.0.1</version>
       <date>2004-09-14</date>

@@ -180,7 +180,7 @@ class File_SMBPasswd extends PEAR {
      * @return mixed returns PEAR_Error, if the user already exists
      * @access public
      */
-    function addAccountEncrypted($user, $userid, $lmhash = '', $nthash = '', $comment = '', $flags = '[U           ]') 
+    function addAccountEncrypted($user, $userid, $lmhash = '', $nthash = '', $comment = '', $flags = '[U          ]') 
     {
         if (empty($lmhash)) $lmhash = str_repeat('X', 32);
         if (empty($nthash)) $nthash = str_repeat('X', 32);
@@ -213,7 +213,7 @@ class File_SMBPasswd extends PEAR {
      * @return mixed returns PEAR_Error, if the user already exists
      * @access public
      */
-    function addAccount($user, $userid, $pass, $comment = '', $flags = '[U           ]') 
+    function addAccount($user, $userid, $pass, $comment = '', $flags = '[U          ]') 
     {
         if (empty($pass)) {
             return $this->addAccountEncrypted($user, $userid, '', '', $comment, $flags) ;
@@ -242,7 +242,7 @@ class File_SMBPasswd extends PEAR {
      */
     function addUser($user, $userid, $pass, $comment = '')
     {
-        return $this->addAccount($user, $userid, $pass, $comment, '[U           ]');
+        return $this->addAccount($user, $userid, $pass, $comment, '[U          ]');
     }
 
     /**
@@ -257,7 +257,7 @@ class File_SMBPasswd extends PEAR {
      */
     function addMachine($machine, $userid, $comment = '')
     {
-        return $this->addAccount($machine . '$', $userid, $machine, $comment, '[W           ]');
+        return $this->addAccount($machine . '$', $userid, $machine, $comment, '[W          ]');
     }
     
     /**
