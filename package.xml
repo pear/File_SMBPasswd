@@ -1,91 +1,139 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<package version="1.0">
-  <name>File_SMBPasswd</name>
-  <summary>Class for managing SAMBA style password files.</summary>
-  <description>With this package, you can maintain smbpasswd-files, usualy used by SAMBA.
-</description>
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.6.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
+ <name>File_SMBPasswd</name>
+ <channel>pear.php.net</channel>
+ <summary>Class for managing SAMBA style password files.</summary>
+ <description>With this package, you can maintain smbpasswd-files, usualy used by SAMBA.
 
-  <maintainers>
-    <maintainer>
-      <user>mbretter</user>
-      <name>Michael Bretterklieber</name>
-      <email>mbretter@php.net</email>
-      <role>lead</role>
-    </maintainer>
-  </maintainers>
-  
-  <license>BSD</license>
-
+ </description>
+ <lead>
+  <name>Michael Bretterklieber</name>
+  <user>mbretter</user>
+  <email>mbretter@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2009-01-25</date>
+ <time>18:32:14</time>
+ <version>
+  <release>1.0.3</release>
+  <api>1.0.3</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD</license>
+ <notes>move to package.xml v2
+ </notes>
+ <contents>
+  <dir name="/">
+   <dir name="examples">
+    <file baseinstalldir="File" name="smbpasswd" role="doc" />
+    <file baseinstalldir="File" name="smbpasswd.php" role="doc" />
+   </dir> <!-- //examples -->
+   <file baseinstalldir="File" name="SMBPasswd.php" role="php" />
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+   <package>
+    <name>Crypt_CHAP</name>
+    <channel>pear.php.net</channel>
+    <min>1.0.0</min>
+   </package>
+   <extension>
+    <name>mhash</name>
+   </extension>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
   <release>
-      <version>1.0.2</version>
-      <date>2005-05-05</date>
-      <state>stable</state>
-      <notes>
-<![CDATA[
-* The Account Flags field had the wrong length.
-]]>
-      </notes>
-
-    <filelist>
-      <dir name="/" baseinstalldir="File">
-        <file role="php" name="SMBPasswd.php"/>
-        <dir name="examples" role="doc">
-          <file name="smbpasswd.php"/>
-          <file name="smbpasswd"/>
-        </dir>
-      </dir>
-    </filelist>
+   <version>
+    <release>1.0.3</release>
+    <api>1.0.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-01-25</date>
+   <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD</license>
+   <notes>move to package.xml v2
+   </notes>
   </release>
-
-  <deps>
-    <dep type="pkg" rel="ge" version="1.0.0">Crypt_CHAP</dep>
-    <dep type="ext" rel="has">mhash</dep>
-  </deps>    
-
-  <changelog>
   <release>
-      <version>1.0.2</version>
-      <date>2005-05-05</date>
-      <state>stable</state>
-      <notes>
-<![CDATA[
-* The Account Flags field had the wrong length.
-]]>
-      </notes>
-    </release>
+   <version>
+    <release>1.0.2</release>
+    <api>1.0.2</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2005-05-05</date>
+   <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD</license>
+   <notes>* The Account Flags field had the wrong length.
 
-    <release>
-      <version>1.0.1</version>
-      <date>2004-09-14</date>
-      <state>stable</state>
-      <notes>
-<![CDATA[
-* Wrong order of NT-Hash/LM-Hash when using addAccount()/modAccount()
-]]>
-      </notes>
-    </release>
+      
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.1</release>
+    <api>1.0.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2004-09-14</date>
+   <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD</license>
+   <notes>* Wrong order of NT-Hash/LM-Hash when using addAccount()/modAccount()
 
-    <release>
-      <version>1.0.0</version>
-      <date>2004-03-25</date>
-      <state>stable</state>
-      <notes>
-<![CDATA[
-* Stable version released
-]]>
-      </notes>
-    </release>
+      
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2004-03-25</date>
+   <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD</license>
+   <notes>* Stable version released
 
-    <release>
-      <version>0.9.0</version>
-      <date>2003-05-02</date>
-      <state>beta</state>
-      <notes>
-<![CDATA[
-* Inital release
-]]>
-      </notes>
-    </release>
-  </changelog>
+      
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.0</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2003-05-02</date>
+   <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD</license>
+   <notes>* Inital release
 
+      
+   </notes>
+  </release>
+ </changelog>
 </package>
