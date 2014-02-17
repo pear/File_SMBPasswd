@@ -1,0 +1,28 @@
+{
+    "authors": [
+        {
+            "email": "mbretter@php.net",
+            "name": "Michael Bretterklieber",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    },
+    "description": "More info available on: http://pear.php.net/package/File_SMBPasswd",
+    "license": "BSD",
+    "name": "pear/file_smbpasswd",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=File_SMBPasswd",
+        "source": "https://github.com/pear/File_SMBPasswd"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
